@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  box-shadow: 0px 2px 15px rgb(78, 78, 78, 0.25);
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.logo {
+  flex: 1 1 30rem;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-links {
+  font-size: 1.5rem;
+  flex: 1 1 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-links h3 {
+  text-align: center;
+  flex-basis: 5rem;
+  position: relative;
+  font-weight: 400;
+}
+
+.active {
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.2rem 5rem;
+  border-radius: 1.8rem;
+  background: #c4c4c4;
+}
+
+.page1 {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 90vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.tribute-text {
+  min-height: 80vh;
+  flex: 1 1 40rem;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+}
+
+.tribute-name {
+  flex: 1 1 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.tribute-name h1 {
+  width: 80%;
+  margin: auto;
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 13rem;
+}
+
+.tribute-desc-cont {
+  flex: 1 1 10rem;
+  background: #747474;
+  display: flex;
+  align-items: center;
+}
+
+.tribute-desc {
+  color: white;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tribute-desc h1 {
+  font-size: 6.4rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.tribute-desc p {
+  width: 80%;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+#img-div {
+  align-self: flex-start;
+  justify-content: center;
+  flex: 1 1 40rem;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  /* background: rgb(68, 68, 68);
+  z-index: -2; */
+}
+
+#image {
+  position: relative;
+  z-index: -1;
+  filter: grayscale(100%);
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  /* width: 100%;
+  height: 100%; */
+  object-fit: cover;
+}
+
+#img-caption {
+  background: #c4c4c4;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#img-caption h1 {
+  margin-right: 10rem;
+  font-size: 7.2rem;
+  font-weight: 700;
+}
+
+.page2 {
+  min-height: 100vh;
+}
+
+.timeline {
+  padding: 5rem 0rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #747474;
+  width: 90%;
+  margin: auto;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-title {
+  flex-basis: 20rem;
+  text-align: center;
+}
+
+.timeline-title h1 {
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+
+.timeline-text {
+  flex: 1 1 20rem;
+  width: 70%;
+  margin: auto;
+  align-self: flex-start;
+}
+
+.timeline-text ul {
+  font-size: 3.6rem;
+}
+
+ul li {
+  margin-bottom: 5rem;
+}
+
+footer {
+  margin-right: 5rem;
+  align-self: flex-end;
+  font-size: 2.4rem;
+}
+
+footer a {
+  color: white;
+}
+
+/* For Tablets */
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 50%;
+  }
+  #tribute-info p {
+    display: none;
+  }
+
+  #img-div {
+    flex: 1 1 50rem;
+  }
+
+  .tribute-text {
+    flex: 1 1 50rem;
+  }
+
+  .page2,
+  .timeline {
+    min-height: 50vh;
+  }
+}
+
+/* For Phones */
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 40%;
+  }
+  .active {
+    padding: 1.2rem 3rem;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .tribute-text {
+    flex: 1 1 60rem;
+  }
+  #img-div {
+    flex: 1 1 60rem;
+  }
+  #image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #img-caption {
+    justify-content: center;
+  }
+  #img-caption h1 {
+    font-size: 5rem;
+    margin-right: 0rem;
+  }
+
+  .timeline {
+    width: 100%;
+    margin: auto;
+  }
+
+  footer {
+    margin-right: 0;
+    align-self: center;
+  }
+}
